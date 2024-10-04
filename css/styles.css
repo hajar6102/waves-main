@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
+
   height: 100vh;
 }
 
@@ -17,7 +18,7 @@ body {
   background-size: 600% 300%;
   animation: gradient-animation 7s ease infinite;
 }
-
+ 
 @keyframes gradient-animation {
   0% {
     background-position: 0% 50%;
@@ -31,7 +32,6 @@ body {
     background-position: 0% 50%;
   }
 }
-
 /* .container-fluif {
     padding: 3% 15% 14%;
 }  */
@@ -49,19 +49,18 @@ body {
 #vColor {
   font-size: 1rem;
   line-height: 1.2;
-  font-family: 'Montserrat', sans-serif;
+ 
   color: black;
 }
 
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
-  font-family: 'Montserrat', sans-serif;
+
   color: white;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
   size: 3rem;
   line-height: 1.5;
 
@@ -93,23 +92,30 @@ h2 {
 } */
 .nav-item {
   padding: 0 19px;
-  font-family: "Ubuntu";
+ 
 }
-
+.fa-bars:before{
+  font-size: 28px;
+}
 .abouteee {
   font-size: 5rem;
 }
-
+@media (max-width:767px) {
+  .abouteee {
+    font-size: 3rem;
+  }
+}
 .about {
 
   color: white;
   font-size: 1.6rem;
 }
-
-
-h3 {
-  font-family: "Ubuntu";
+header li{
+  font-weight: 400;
 }
+/* h3 {
+  font-family: "Ubuntu";
+} */
 
 p {
   color: #8F8F8F;
@@ -202,7 +208,7 @@ img.Waves {
 }
 
 .navbar-brand {
-  font-family: "Ubuntu";
+  
   font-size: 2.5rem;
   font-weight: bold;
 
@@ -245,7 +251,57 @@ img.Waves {
   padding-top: 3%;
   padding-bottom: 7%;
 }
-
+/*join us*/
+.join-us-img{
+  width: 40px;  
+}
+.wave-background .social_icon li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wave-background .social_icon li a{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) and (max-width: 853px) {
+  .wave-background .social_icon ul {
+      list-style: none;
+      right: 4px;
+      margin-top: -40%;
+      position: absolute;
+      padding-left: 0rem !important;
+  }
+}
+@media (min-width: 912px) and (max-width: 1024px) {
+  .wave-background .social_icon ul {
+      list-style: none;
+      right: 20px;
+      position: absolute;
+      padding-left: 0rem !important;
+      margin-top: -32%;
+  }
+}
+@media (min-width: 1280px) {
+  .wave-background .social_icon ul {
+      list-style: none;
+      right: 20px;
+      position: absolute;
+      padding-left: 0rem !important;
+      margin-top: -25%;
+  }
+}
+@media (min-width: 853px) and (max-width: 853px) {
+  .wave-background .social_icon ul {
+      list-style: none;
+      right: 20px;
+      position: absolute;
+      padding-left: 0rem !important;
+      margin-top: -38%;
+  }
+}
+/*end of join us*/
 #COM,
 #team-section,
 #members-of-the-month,
@@ -256,14 +312,14 @@ img.Waves {
 }
 
 .section-title {
-  font-family: 'Montserrat', sans-serif;
+ 
   text-align: center;
   color: #C0A975;
   margin-bottom: 20px;
 }
 
 .section-text {
-  font-family: 'Montserrat', sans-serif;
+ 
   font-size: 1.1rem;
   line-height: 1.6;
   color: #ffffff;
@@ -441,7 +497,7 @@ img.Waves {
 }
 
 .feture-box h3 {
-  font-family: 'Montserrat', sans-serif;
+ 
   font-size: 1.5rem;
   color: #333;
   /* margin-top: 1rem;
@@ -580,7 +636,6 @@ img.Waves {
 
 .section-title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   margin-bottom: 40px;
   color: #333;
@@ -655,7 +710,7 @@ img.Waves {
   background-color: #F1F1E6;
   font-size: 3.0rem;
   line-height: 1.2;
-  font-family: 'Montserrat', sans-serif;
+
   color: white;
 }
 
@@ -742,7 +797,6 @@ img.Waves {
   text-align: center;
   font-size: 36px;
   margin-bottom: 40px;
-  font-family: 'Roboto', sans-serif;
   color: #333;
 }
 
@@ -1118,9 +1172,9 @@ footer .wave#wave4,
   }
 }
 
-.section-title2 {
+/* .section-title2 {
   font-family: "ubuntu";
-}
+} */
 
 .mission,
 .vision,
@@ -1154,6 +1208,43 @@ footer .wave#wave4,
 .NEWS p {
   max-width: 700px;
 }
+
+
+.NEWS .news .imge{
+  position: relative;
+}
+.NEWS .news .imge::before,
+.NEWS .news .imge::after{
+  content: "";
+  position: absolute;
+  width: 3px;
+  height:0;
+  transition: .8s;
+}
+.NEWS .news .imge::before{
+  left: 70px;
+  top: 0;
+  background:linear-gradient( #A3A7DE, blue);
+}
+.NEWS .news .imge::after{
+  right: 70px;
+  bottom: 10px;
+  background:linear-gradient( blue,#A3A7DE);
+}
+.NEWS .news:hover .imge::before,
+.NEWS .news:hover .imge::after{
+  height: calc(100% - 10px);
+}
+
+@media (max-width:767px) {
+  .NEWS .news .imge::before{
+    left: 40px;
+  }
+  .NEWS .news .imge::after{
+    right: 40px;
+  }
+}
+
 
 .left-para {
   padding-left: 7%;
@@ -1280,9 +1371,9 @@ footer .wave#wave4,
 
   }
 }
-
+/*get it back when we remove join us*/
 /*ipads*/
-@media (min-width:768px) and (max-width:853px){
+/* @media (min-width:768px) and (max-width:853px){
   .wave-background .social_icon ul {
     list-style: none;
     right: 20px;
@@ -1290,8 +1381,8 @@ footer .wave#wave4,
     position: absolute;
     padding-left: 0rem !important;
   }
-}
-@media (min-width:853px) and (max-width:853px){
+} */
+/* @media (min-width:853px) and (max-width:853px){
   .wave-background .social_icon ul {
     list-style: none;
     right: 20px;
@@ -1300,8 +1391,8 @@ footer .wave#wave4,
     margin-top: -35%;
 
     }
-}
-@media (min-width:912px) and (max-width:1024px) {
+} */
+/* @media (min-width:912px) and (max-width:1024px) {
   .wave-background .social_icon ul {
   list-style: none;
   right: 20px;
@@ -1309,8 +1400,8 @@ footer .wave#wave4,
   padding-left: 0rem !important;
   margin-top: -29%;
   }
-}
-@media (min-width:1280px){
+} */
+/* @media (min-width:1280px){
   .wave-background .social_icon ul {
   list-style: none;
   right: 20px;
@@ -1318,7 +1409,8 @@ footer .wave#wave4,
   padding-left: 0rem !important;
   margin-top: -22%;
   }
-}
+} */
+ /*end of get it back when we remove join us*/
 .social_icon ul {
   padding-left: 0rem !important;
   list-style: none;
